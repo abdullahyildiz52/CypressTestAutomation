@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-15T09:28:07.717Z",
+    "end": "2024-11-15T09:29:47.386Z",
+    "duration": 99669,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "81f03b9a-7b18-4638-9aab-add7843a4ca8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login-test.cy.js",
+      "file": "cypress\\e2e\\login-test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "99896e69-6040-472d-ab92-dbf890b11d14",
+          "title": "Opencart Register Login Logout Add-Cart Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Kullanici basarili kayit işlemi",
+              "fullTitle": "Opencart Register Login Logout Add-Cart Tests Kullanici basarili kayit işlemi",
+              "timedOut": null,
+              "duration": 25135,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[class='fa-solid fa-user']\").click({\n  force: true\n});\ncy.get(\"#top > div > div.nav.float-end > ul > li:nth-child(2) > div > ul > li:nth-child(1) > a\").click({\n  force: true\n});\nregisterPage.fillFirstName();\nregisterPage.fillLastName();\nregisterPage.fillEmail();\nregisterPage.fillPassword();\nregisterPage.privacyPolicyButton();\nregisterPage.continueButton();\ncy.wait(5000);\n// Kayıtlı kullanıcı ile test \"Warning: E-Mail Address is already registered!\" mesajını içeren öğeyi doğrulama\ncy.contains('Warning: E-Mail Address is already registered!').should('be.visible');",
+              "err": {},
+              "uuid": "d4163ecb-7050-4f23-ae30-12d568ee01fd",
+              "parentUUID": "99896e69-6040-472d-ab92-dbf890b11d14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Kullanici basarili login işlemi",
+              "fullTitle": "Opencart Register Login Logout Add-Cart Tests Kullanici basarili login işlemi",
+              "timedOut": null,
+              "duration": 21397,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.allure().feature('kullanıcı giriş testi')\n//cy.allure().story('login-test')\nmainPage.clickMyAccount();\ncy.get(\"#top > div > div.nav.float-end > ul > li:nth-child(2) > div > ul > li:nth-child(2) > a\").click();\nvar mail = \"test.abdullahy1@gmail.com\";\nloginPage.fillEmail(mail);\nvar password = \"TestTest*52\";\nloginPage.fillPassword(password);\ncy.get(\"[type='submit']\").click();\ncy.wait(5000);\n// Hesaba giriş yapıldığını   \"My Orders\" mesajının sayfa da göründüğünü doğrulama\ncy.contains('My Orders').should('be.visible');",
+              "err": {},
+              "uuid": "f4760ad5-147f-4767-87fc-3f5d1fc1ca40",
+              "parentUUID": "99896e69-6040-472d-ab92-dbf890b11d14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Kullanici login-logout işlemi",
+              "fullTitle": "Opencart Register Login Logout Add-Cart Tests Kullanici login-logout işlemi",
+              "timedOut": null,
+              "duration": 23567,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "mainPage.clickMyAccount();\ncy.get(\"#top > div > div.nav.float-end > ul > li:nth-child(2) > div > ul > li:nth-child(2) > a\").click();\nvar mail = \"test.abdullahy1@gmail.com\";\nloginPage.fillEmail(mail);\nvar password = \"TestTest*52\";\nloginPage.fillPassword(password);\ncy.get(\"[type='submit']\").click();\ncy.wait(5000);\n// Hesaba giriş yapıldığını   \"My Orders\" mesajının sayfa da göründüğünü doğrulama\ncy.contains('My Orders').should('be.visible');\nloginPage.clickMyAccount();\nloginPage.clickLogout();\nloginPage.clickAccountLogoutContinue();\nloginPage.clickMyAccount();\ncy.wait(5000);\n// Çıkış yapıldıktan sonra kontroletmek için My Acoount a tıklandığında Login metni var mı kontrol\ncy.contains('Login').should('be.visible');",
+              "err": {},
+              "uuid": "ebb656e9-f11e-44ba-9abe-5926825a62cc",
+              "parentUUID": "99896e69-6040-472d-ab92-dbf890b11d14",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Kullanici add cart işlemi",
+              "fullTitle": "Opencart Register Login Logout Add-Cart Tests Kullanici add cart işlemi",
+              "timedOut": null,
+              "duration": 22560,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "mainPage.clickMyAccount();\ncy.get(\"#top > div > div.nav.float-end > ul > li:nth-child(2) > div > ul > li:nth-child(2) > a\").click();\nvar mail = \"test.abdullahy1@gmail.com\";\nloginPage.fillEmail(mail);\nvar password = \"TestTest*52\";\nloginPage.fillPassword(password);\ncy.get(\"[type='submit']\").click();\ncy.wait(5000);\n// Hesaba giriş yapıldığını   \"My Orders\" mesajının sayfa da göründüğünü doğrulama\ncy.contains('My Orders').should('be.visible');\nmainPage.clickLogo();\nmainPage.clickCartFirstProduct();\ncy.wait(5000);\ncy.contains(\"Success: You have added MacBook to your shopping cart!\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "212032cd-480d-49a2-96ee-9782a3925fb7",
+              "parentUUID": "99896e69-6040-472d-ab92-dbf890b11d14",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d4163ecb-7050-4f23-ae30-12d568ee01fd",
+            "f4760ad5-147f-4767-87fc-3f5d1fc1ca40",
+            "ebb656e9-f11e-44ba-9abe-5926825a62cc",
+            "212032cd-480d-49a2-96ee-9782a3925fb7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 92659,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "open": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

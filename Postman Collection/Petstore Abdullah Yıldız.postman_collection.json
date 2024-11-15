@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "eb858dad-3c70-4c66-8b80-c46e018ee94f",
+		"name": "Petstore Abdullah Yıldız",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28860542"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Petstore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/abdullahy",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"abdullahy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Petstore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"id\": 5252,\r\n    \"username\": \"abdullahy\",\r\n    \"firstName\": \"Abdullah\",\r\n    \"lastName\": \"Yıldız\",\r\n    \"email\": \"test.abdullahy@gmail.com\",\r\n    \"password\": \"paspassword\",\r\n    \"phone\": \"05555555555\",\r\n    \"userStatus\": 0 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/abdullahy",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"abdullahy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Petstore",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/abdullahy",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"abdullahy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Petstore",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"id\": 5252,\r\n      \"username\": \"abdullahy\",\r\n      \"firstName\": \"Abdullah\",\r\n      \"lastName\": \"PUT Guncelle\",\r\n      \"email\": \"test.abdullahy@gmail.com\",\r\n      \"password\": \"paspassword\",\r\n      \"phone\": \"05555555555\",\r\n      \"userStatus\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/user/abdullahy",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"user",
+								"abdullahy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

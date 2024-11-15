@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-15T08:09:29.800Z",
+    "end": "2024-11-15T08:09:31.067Z",
+    "duration": 1267,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d5031b8-67b5-4286-bbca-2ee3d3b2da7e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\apiPetstoreTests.cy.js",
+      "file": "cypress\\e2e\\apiPetstoreTests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "99e525ec-7ac0-48ea-a405-061acbb02cc8",
+          "title": "Swagger Petstore API Testleri ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET - Kullanici bilgilerini getir",
+              "fullTitle": "Swagger Petstore API Testleri  GET - Kullanici bilgilerini getir",
+              "timedOut": null,
+              "duration": 743,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(\"GET\", \"https://petstore.swagger.io/v2/user/abdullahy\");",
+              "err": {},
+              "uuid": "a9958827-4d5f-4026-baec-2032a8bdb9e6",
+              "parentUUID": "99e525ec-7ac0-48ea-a405-061acbb02cc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE - Kullanici bilgilerini Sil",
+              "fullTitle": "Swagger Petstore API Testleri  DELETE - Kullanici bilgilerini Sil",
+              "timedOut": null,
+              "duration": 155,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(\"DELETE\", \"https://petstore.swagger.io/v2/user/abdullahy\");",
+              "err": {},
+              "uuid": "339e409d-7620-485f-b363-f21a459d7483",
+              "parentUUID": "99e525ec-7ac0-48ea-a405-061acbb02cc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST - Kullanici Oluştur",
+              "fullTitle": "Swagger Petstore API Testleri  POST - Kullanici Oluştur",
+              "timedOut": null,
+              "duration": 150,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://petstore.swagger.io/v2/user/\",\n  body: payload\n});",
+              "err": {},
+              "uuid": "88f186cb-a52e-49c5-a9f5-6cdb998c70ee",
+              "parentUUID": "99e525ec-7ac0-48ea-a405-061acbb02cc8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PUT - Kullanici Güncelle",
+              "fullTitle": "Swagger Petstore API Testleri  PUT - Kullanici Güncelle",
+              "timedOut": null,
+              "duration": 149,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"PUT\",\n  url: \"https://petstore.swagger.io/v2/user/abdullahy\",\n  body: payload\n});",
+              "err": {},
+              "uuid": "39acbeb4-9b25-40e6-a794-7aa7e5a123b9",
+              "parentUUID": "99e525ec-7ac0-48ea-a405-061acbb02cc8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a9958827-4d5f-4026-baec-2032a8bdb9e6",
+            "339e409d-7620-485f-b363-f21a459d7483",
+            "88f186cb-a52e-49c5-a9f5-6cdb998c70ee",
+            "39acbeb4-9b25-40e6-a794-7aa7e5a123b9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1197,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "open": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
